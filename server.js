@@ -51,7 +51,7 @@ app.get('/coordinate', function (req, res) {
 			last_name: req.body.last_name,
 			age: req.body.age,
 			address: req.body.address,
-			error: checkcoordinate(req.body),
+			error: checkcoordinate(req.body)
 		})
 	}
 });

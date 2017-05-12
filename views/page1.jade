@@ -8,15 +8,23 @@ html
 		div.form-group
 			label(for="first_name") Prénom
 			input#first_name.form-control(type="text" name="first_name" value=first_name)
+			if error.first_name
+			div.alert.alert-danger #{error.first_name}
 		div.form-group
 			label(for="last_name") Nom de famille
 			input#last_name.form-control(type="text" name="last_name" value=last_name)
+			if error.last_name
+			div.alert.alert-danger #{error.last_name}
 		div.form-group
 			label(for="age") Date de naissance
 			input#age.form-control(type="text" name="age" value=age)
+			if error.age
+			div.alert.alert-danger #{error.age}
 		div.form-group
 			label(for="address") Adresse
 			textarea#address.form-control(type="text" name="address" value=address)
+			if error.address
+			div.alert.alert-danger #{error.address}
 		div.form-group
 			button#submit.btn.btn-info(type="button") page suivante
 		script(type="text/javascript" src="node_modules/jquery/dist/jquery.min.js")
